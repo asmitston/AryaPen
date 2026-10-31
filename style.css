@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #111827;
+    border-bottom: 1px solid #263247;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.version {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tag {
+    color: #38bdf8;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #94a3b8;
+}
+
+.scanner-card {
+    background: #172033;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    margin-bottom: 45px;
+}
+
+.scanner-card h2 {
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    background: #0b1120;
+    border: 1px solid #475569;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.authorization {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #0284c7;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.result p {
+    margin-top: 8px;
+}
+
+.success {
+    background: #064e3b;
+    color: #a7f3d0;
+}
+
+.error {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.modules h2 {
+    margin-bottom: 20px;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.module {
+    padding: 25px;
+    background: #172033;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+.module span {
+    font-size: 28px;
+}
+
+.module h3 {
+    margin: 12px 0;
+}
+
+.module p {
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.module small {
+    color: #38bdf8;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    border-top: 1px solid #263247;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+}

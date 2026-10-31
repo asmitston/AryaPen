@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AryaPen | Security Toolkit</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">🛡 AryaPen</div>
+        <span class="version">VERSION 1.0</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="tag">WEB APPLICATION SECURITY TOOLKIT</p>
+
+            <h1>Security Assessment Dashboard</h1>
+
+            <p class="subtitle">
+                Analyze your authorized web applications
+                with AryaPen.
+            </p>
+        </section>
+
+        <section class="scanner-card">
+
+            <h2>Start Security Assessment</h2>
+
+            <p class="description">
+                Enter the URL of your own website or an
+                application you have permission to test.
+            </p>
+
+            <form method="POST">
+
+                <label for="target">Target URL</label>
+
+                <input
+                    type="text"
+                    id="target"
+                    name="target"
+                    placeholder="https://example.com"
+                    value="{{ target }}"
+                    required
+                >
+
+                <label class="authorization">
+                    <input
+                        type="checkbox"
+                        name="authorized"
+                        value="yes"
+                        required
+                    >
+                    I own this application or have explicit
+                    permission to test it.
+                </label>
+
+                <button type="submit">
+                    Validate Target
+                </button>
+
+            </form>
+
+            {% if result %}
+
+                <div class="result {{ result.status }}">
+                    <strong>
+                        {% if result.status == "success" %}
+                            Validation Successful
+                        {% else %}
+                            Validation Failed
+                        {% endif %}
+                    </strong>
+
+                    <p>{{ result.message }}</p>
+                </div>
+
+            {% endif %}
+
+        </section>
+
+        <section class="modules">
+
+            <h2>Security Modules</h2>
+
+            <div class="module-grid">
+
+                <div class="module">
+                    <span>🌐</span>
+                    <h3>HTTP Analyzer</h3>
+                    <p>HTTP security headers analysis</p>
+                    <small>Coming in Phase 3</small>
+                </div>
+
+                <div class="module">
+                    <span>🔒</span>
+                    <h3>SSL Checker</h3>
+                    <p>HTTPS certificate checks</p>
+                    <small>Coming in Phase 3</small>
+                </div>
+
+                <div class="module">
+                    <span>🔍</span>
+                    <h3>Port Scanner</h3>
+                    <p>Authorized network port checks</p>
+                    <small>Coming in Phase 2</small>
+                </div>
+
+                <div class="module">
+                    <span>📊</span>
+                    <h3>Security Reports</h3>
+                    <p>Assessment results and reports</p>
+                    <small>Coming in Phase 6</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AryaPen | Educational Cybersecurity Project
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
+
+</body>
+</html>
